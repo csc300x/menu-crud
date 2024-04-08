@@ -16,7 +16,7 @@ const menuRouter = require("./routes/menu.route");
 app.use("/menu", menuRouter);
 
 app.get("/", (req, res) => {
-  res.json({ message: "You are at the home page!" });
+  res.render("index", { title: 'Home Page' });
 });
 
 const PORT = process.env.PORT || 8000;
